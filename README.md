@@ -54,7 +54,9 @@ In this project we use 2 different methods for evaluation:
 In this function we compare prediction answer with the original answer. If they are same its going to return 1 other wise 0.
 F1 Score:
 - In this function we compute F1 Score for our predicted answer. F1 Score define as:
+
 ![This is an image](images/2.png)
+
 For computing this score we use Counter method of collection library.
 We find every same word that happen in both real answer and predicted answer using this method which are our True Positive in this case.
 
