@@ -1,8 +1,8 @@
 # Question and Answering on SQUAD dataset
 This document is a summary of the works and steps we took to build a question-and-answer system. In this project, we used the database (SQUAD), which is a rich collection of content on the Wikipedia website, and we will explain more about it later. The implementation steps of this program are executed in the Google Collab environment and all the codes will be compatible with this system for sure. Also, the files related to the database can be downloaded separately from the original website. The model bellow is implemented on version 2.0.
 
-## Loading Data Set:
-### A. Reading Data set:
+## Loading the Dataset:
+### A. Reading the Dataset:
 SQUAD data set is ready in .json Format. Data set consist of 442 different articles. Every article divides into different paragraph and for every paragraph we may have one or multiple question and their answer. We use 90% of data set for training and 10% for validation. We make 3 different list:
 #### Context List: which we put paragraph content into it.
 #### Question List: For every paragraph there is one or multiple question. We put questions into this list. (For every question for context we repeat the same context in previous list)
@@ -37,7 +37,7 @@ We use same function for Validation set. In this case we do not need start posit
 
 ### Data Analyse
 As we could see in the charts bellow, in our dataset, the maximum length of the context is 854 which is bigger than what we expected but the average of them is 155. Next, we compute the average of the questions and answers. These calculations, could be important for us, for example for the answers list, could serve as a threshold for determine answerability.
-# [image]
+![This is an image](images/1.png)
 
 ### Data Normalization
 In this different function to normalize our data set.
@@ -54,7 +54,7 @@ In this project we use 2 different methods for evaluation:
 In this function we compare prediction answer with the original answer. If they are same its going to return 1 other wise 0.
 F1 Score:
 - In this function we compute F1 Score for our predicted answer. F1 Score define as:
-# [image]
+![This is an image](images/2.png)
 For computing this score we use Counter method of collection library.
 We find every same word that happen in both real answer and predicted answer using this method which are our True Positive in this case.
 
