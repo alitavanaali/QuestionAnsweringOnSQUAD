@@ -12,9 +12,7 @@ Next step is to find answer spin in the context. In our data set we already have
 In this function we want to add end position of answer into Answer list as another key into dictionary list of answers.
 ### B. Tokenizing
 For Tokenizing our data set we Use BertTokenizerFast method of transformers Library. For these purposes we use BERT base model (Uncased). This model is uncased: it does not make a difference between english and English.
-#### BERT MODEL: BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots
-  
-of publicly available data) with an automatic process to generate inputs and labels from those texts.
+#### BERT MODEL: BERT is a transformers model pretrained on a large corpus of English data in a self-supervised fashion. This means it was pretrained on the raw texts only, with no humans labelling them in any way (which is why it can use lots of publicly available data) with an automatic process to generate inputs and labels from those texts.
 This tokenizer as input takes a sentence and as output give a diction consist of 3 keys:
 1. Input_ids: Consist of Tokenizing (splitting strings in sub-word token strings),
 converting tokens strings to ids and back, and encoding/decoding (i.e.,
